@@ -38,6 +38,17 @@ prevBtn.addEventListener("click", () => {
 
 // Adding dots
 
-const indicators = document.createElement("ol");
-indicators.classList.add(".caroules-indikators");
+const indicators = document.createElement("ul");
+indicators.classList.add("caroules-indikators");
 slideWrapper.append(indicators);
+
+let dots = [];
+
+for (let i = 0; i < elsSlide.length; i++) {
+  const dot = document.createElement("li");
+  dot.setAttribute("data-slide-to", i + 1);
+  dot.classList.add("indicator-dots");
+  if (i == 0) dot.style.opacity = 1;
+  indicators.append(dot);
+  dot.push(dot);
+}

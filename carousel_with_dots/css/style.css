@@ -135,3 +135,23 @@ button:active {
 .slide_sololearn {
   background-image: url("../img/solo_learn.jpg");
 }
+
+/* dots */
+
+.caroules-indikators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style-type: none;
+  display: flex;
+}
+
+.indicator-dots {
+  width: 20px;
+  height: 5px;
+  margin: 0 8px;
+  background-color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+}
