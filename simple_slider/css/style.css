@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*:focus {
+  outline: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  background-image: url("../img/next_btn_img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+.slide_wrapper {
+  width: 900px;
+  min-height: 500px;
+  background-color: #505050;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #07fd3c;
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slide::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.711);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide_title {
+  font-size: 40px;
+  font-weight: 800;
+  z-index: 5;
+  max-width: 500px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.slide_text {
+  position: relative;
+  z-index: 5;
+  max-width: 500px;
+}
+
+.slide_badge {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  padding: 15px 40px;
+  background-color: rgb(58, 53, 206);
+  text-align: center;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide_badge:active {
+  transform: translateY(2px);
+}
+
+.next_btn {
+  right: 15px;
+}
+
+.prev_btn {
+  left: 15px;
+  transform: rotate(180deg);
+}
+
+.slide_jsinfo {
+  background-image: url("../img/js_info.png");
+}
+
+.slide_freecodecamp {
+  background-image: url("../img/freecodecamp.jpg");
+}
+
+.slide_w3schools {
+  background-image: url("../img/w3_schools.png");
+}
+
+.slide_sololearn {
+  background-image: url("../img/solo_learn.jpg");
+}
