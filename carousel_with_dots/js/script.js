@@ -35,3 +35,9 @@ prevBtn.addEventListener("click", () => {
   }
   slideInner.style.transform = `translateX(-${offset}px)`;
 });
+
+// Adding dots
+
+const indicators = document.createElement("ol");
+indicators.classList.add(".caroules-indikators");
+slideWrapper.append(indicators);
