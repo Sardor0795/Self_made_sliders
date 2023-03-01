@@ -18,24 +18,6 @@ elsSlide.forEach((v) => {
 
 slideInner.style.transition = "0.3s ease all";
 
-nextBtn.addEventListener("click", () => {
-  if (offset == +width.slice(0, width.length - 2) * (elsSlide.length - 1)) {
-    offset = 0;
-  } else {
-    offset += +width.slice(0, width.length - 2);
-  }
-  slideInner.style.transform = `translateX(-${offset}px)`;
-});
-
-prevBtn.addEventListener("click", () => {
-  if (offset == 0) {
-    offset = +width.slice(0, width.length - 2) * (elsSlide.length - 1);
-  } else {
-    offset -= +width.slice(0, width.length - 2);
-  }
-  slideInner.style.transform = `translateX(-${offset}px)`;
-});
-
 // Adding dots
 
 const indicators = document.createElement("ul");
@@ -50,5 +32,59 @@ for (let i = 0; i < elsSlide.length; i++) {
   dot.classList.add("indicator-dots");
   if (i == 0) dot.style.opacity = 1;
   indicators.append(dot);
-  dot.push(dot);
+  dots.push(dot);
 }
+
+nextBtn.addEventListener("click", () => {
+  if (offset == +width.slice(0, width.length - 2) * (elsSlide.length - 1)) {
+    offset = 0;
+  } else {
+    offset += +width.slice(0, width.length - 2);
+  }
+  slideInner.style.transform = `translateX(-${offset}px)`;
+
+  if (slideIndex == elsSlide.length) {
+    slideIndex = 1;
+  } else {
+    slideIndex++;
+  }
+
+  dots.forEach((v) => {
+    v.style.opacity = 0.5;
+  });
+  dots[slideIndex - 1].style.opacity = 1;
+});
+
+prevBtn.addEventListener("click", () => {
+  if (offset == 0) {
+    offset = +width.slice(0, width.length - 2) * (elsSlide.length - 1);
+  } else {
+    offset -= +width.slice(0, width.length - 2);
+  }
+  slideInner.style.transform = `translateX(-${offset}px)`;
+
+  if (slideIndex == 1) {
+    slideIndex = elsSlide.length;
+  } else {
+    slideIndex--;
+  }
+
+  dots.forEach((v) => {
+    v.style.opacity = 0.5;
+  });
+  dots[slideIndex - 1].style.opacity = 1;
+});
+
+dots.forEach((dot) => {
+  dot.addEventListener("click", (e) => {
+    const slideTo = e.target.getAttribute("data-slide-to");
+
+    slideIndex = slideTo;
+    offset = +width.slice(0, width.length - 2) * (slideTo - 1);
+    slideInner.style.transform = `translateX(-${offset}px)`;
+    dots.forEach((v) => {
+      v.style.opacity = 0.5;
+    });
+    dots[slideIndex - 1].style.opacity = 1;
+  });
+});

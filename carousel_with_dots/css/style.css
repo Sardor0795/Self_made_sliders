@@ -150,8 +150,9 @@ button:active {
 .indicator-dots {
   width: 20px;
   height: 5px;
-  margin: 0 8px;
+  margin: 0 4px;
   background-color: #fff;
+  transition: opacity 0.3s ease;
   opacity: 0.5;
   cursor: pointer;
 }
