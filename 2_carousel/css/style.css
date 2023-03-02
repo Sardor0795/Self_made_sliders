@@ -135,3 +135,22 @@ button:active {
 .slide_sololearn {
   background-image: url("../img/solo_learn.jpg");
 }
+
+.back {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  color: #0014ff;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: slategray;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.back:active {
+  transform: translateY(2px);
+}
+.back:hover {
+  background-color: rgb(215, 29, 29);
+  color: #000;
+}
