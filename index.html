@@ -5,6 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Self Made Sliders</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #202020;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      a {
+        margin: 0 50px;
+        color: #0014ff;
+        text-decoration: none;
+        padding: 15px 30px;
+        background-color: slategray;
+        border-radius: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease,
+          color 0.3s ease;
+      }
+      a:active {
+        transform: translateY(2px);
+      }
+      a:hover {
+        background-color: rgb(215, 29, 29);
+        color: #000;
+      }
+    </style>
   </head>
   <body>
     <a href="./1_simple_slider/index.html">Simple Slider</a>
