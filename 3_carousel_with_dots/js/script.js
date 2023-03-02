@@ -7,7 +7,6 @@ const slideWrapper = document.querySelector(".slide_wrapper");
 const slideInner = document.querySelector(".slide_inner");
 const width = window.getComputedStyle(slideWrapper).width;
 
-let slideIndex = 1;
 let offset = 0;
 
 slideInner.style.width = 100 * elsSlide.length + "%";
@@ -79,7 +78,6 @@ dots.forEach((dot) => {
   dot.addEventListener("click", (e) => {
     const slideTo = e.target.getAttribute("data-slide-to");
 
-    slideIndex = slideTo;
     offset = +width.slice(0, width.length - 2) * (slideTo - 1);
     slideInner.style.transform = `translateX(-${offset}px)`;
     dots.forEach((v) => {

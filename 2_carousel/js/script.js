@@ -7,7 +7,6 @@ const slideWrapper = document.querySelector(".slide_wrapper");
 const slideInner = document.querySelector(".slide_inner");
 const width = window.getComputedStyle(slideWrapper).width;
 
-let slideIndex = 1;
 let offset = 0;
 
 slideInner.style.width = 100 * elsSlide.length + "%";
