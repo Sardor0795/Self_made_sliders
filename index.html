@@ -35,9 +35,19 @@
         background-color: rgb(215, 29, 29);
         color: #000;
       }
-      .mainMenu {
+      .mainMenu,
+      .back {
+        width: 150px;
+        text-align: center;
+        padding: 10px 20px;
+      }
+      .btnsWrapper {
         position: absolute;
         bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
       }
     </style>
   </head>
@@ -45,6 +55,11 @@
     <a href="./1_simple_slider/index.html">Simple Slider</a>
     <a href="./2_carousel/index.html">Carousel</a>
     <a href="./3_carousel_with_dots/index.html">Carousel With Dots</a>
-    <a class="mainMenu" href="https://s-antd.netlify.app/">Main Menu</a>
+    <div class="btnsWrapper">
+      <a class="mainMenu" href="https://s-antd.netlify.app/">Main Menu</a>
+      <a class="back" href="https://s-antd.netlify.app/components/carousel"
+        >Back</a
+      >
+    </div>
   </body>
 </html>
